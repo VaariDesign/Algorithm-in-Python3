@@ -1,3 +1,5 @@
+import random #needed only for testing
+
 class Node:
 
     # Constructor to initialize the node object
@@ -35,3 +37,16 @@ class LinkedList:
         while(temp):
             print(temp.data,end=" ")
             temp = temp.next
+
+
+# Creating Random Linked List
+linked_list = LinkedList()
+for i in range(random.randint(5,20)):
+    linked_list.push(random.randint(-100,100))
+#Testing functions
+print ("Given Linked List")
+linked_list.printList()
+linked_list.reverse()
+print ("\nReversed Linked List")
+linked_list.printList()
+
